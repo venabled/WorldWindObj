@@ -157,7 +157,11 @@ public abstract class GLRenderable implements Renderable, PreRenderable, Highlig
 			gl.glPushMatrix();
 			gl.glLoadIdentity();
 			gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_POSITION, params, 0);
+			gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_AMBIENT, new float[]{0.6f, 0.6f, 0.6f}, 0);
+			gl.glLightfv(GL2.GL_LIGHT0, GL2.GL_DIFFUSE, new float[]{1.0f, 1.0f, 1.0f}, 0);
+
 			gl.glPopMatrix();
+
 		}
 
 		gl.glEnable(GL2.GL_NORMALIZE);
